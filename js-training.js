@@ -1,33 +1,50 @@
-// function greet(called) {
-//     alert("Hello James " + ", my name is " + called + "!!!!");
-//     called++;
-// }
-
-// greet("Bond");
-// greet("James");
-
-
-// function trippleMe(x) {
-//     return (x * 3);
-// }
-
-// let yy = trippleMe(22);
-// alert(yy);
-
-// document.addEventListener("click", myB)
-
-// function myB() {
-//     alert("You have clicked !!!!, Click again")
-// }
+let pets = [{
+        name: "meaowalot",
+        species: "Cat",
+        age: 2
+    },
+    {
+        name: "barksalot",
+        species: "Dog",
+        age: 2
+    },
+    {
+        name: "mowalot",
+        species: "Cow",
+        age: 6
+    }
+]
 
 
-// Array
 
-// for (i = 0; i < myWords.length; i++) {
-//     console.log(myWords[i]);
-// }
+console.log(pets.push({
+    name: "growsalot",
+    species: "Dog",
+    age: 3
+}))
+console.log(pets)
 
-let myWords = ["Kampalan", "Mbarara", "Arua", "Masaka"]
-myWords += myWords.push("Kasese")
+let test = pets.map(nameOnly)
 
-console.log(myWords)
+function nameOnly(x) {
+
+    return x.name
+}
+
+// console.log(test)
+
+let test2 = pets.filter(onDogs)
+
+function onDogs(x) {
+    return x.species == "Dog"
+
+}
+
+function onlyBabyDogs(x) {
+    return x.age < 4
+
+}
+
+let babydogs = test2.filter(onlyBabyDogs).map(nameOnly)
+
+console.log(babydogs)
