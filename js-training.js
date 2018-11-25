@@ -48,3 +48,15 @@ function onlyBabyDogs(x) {
 let babydogs = test2.filter(onlyBabyDogs).map(nameOnly)
 
 console.log(babydogs)
+
+function addApples(a, b) {
+    return a + b
+}
+
+addApples(3, 5)
+
+function avg(addApples, c) {
+    return addApples(a, b) / 2
+}
+
+avg(addApples(3, 5), 2)
