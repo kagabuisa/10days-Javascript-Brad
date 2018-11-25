@@ -14,8 +14,20 @@
 // let yy = trippleMe(22);
 // alert(yy);
 
-document.addEventListener("click", myB)
+// document.addEventListener("click", myB)
 
-function myB() {
-    alert("You have clicked !!!!, Click again")
-}
+// function myB() {
+//     alert("You have clicked !!!!, Click again")
+// }
+
+
+// Array
+
+// for (i = 0; i < myWords.length; i++) {
+//     console.log(myWords[i]);
+// }
+
+let myWords = ["Kampalan", "Mbarara", "Arua", "Masaka"]
+myWords += myWords.push("Kasese")
+
+console.log(myWords)
