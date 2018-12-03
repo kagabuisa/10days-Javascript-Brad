@@ -1,8 +1,19 @@
-// let myNumbers = [2, 50, 2000]
-// let doubleNumbers = myNumbers.map((x) =>
-//     return x * 0.5)
+let ourForm = document.getElementById("ourForm")
+let ourField = document.getElementById("ourField")
+let ourList = document.getElementById("ourList")
 
-// console.log(doubleNumbers)
+ourForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    createItem(ourField.value)
+})
 
-let myName = "Kagabu Isa";
-console.log(`Hello, people ${function(){let b=3;if(b>2){return b*50}}()} is my name.`)
+function createItem(x) {
+    let ourHTML = `<li> ${x} <button onclick="deleteItem(this)">Delete</button></li>`
+    ourList.insertAdjacentHTML("afterbegin", ourHTML)
+    ourField.value = ""
+    ourField.focus();
+}
+
+function deleteItem(elementToDelete) {
+    elementToDelete.parentElement.remove()
+}
